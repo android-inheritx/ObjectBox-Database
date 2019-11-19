@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.example.objectbox.database.User" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.name}"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Vidhi" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.email}"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                tools:text="vidhi@inheritx.com" />
+
+            <!--            <TextView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text='@{"Age : " +item.age}'-->
+            <!--                android:textColor="@android:color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                tools:text="Age : 22" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{item.contactNumber==null ? "" : "Contact no. : " +item.contactNumber}'
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                tools:text="Age : 22" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
